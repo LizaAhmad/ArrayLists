@@ -13,6 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ArrayLists\ArrayLists.csproj" />
+    <ProjectReference Include="..\ArrayList\ArrayList.csproj" />
   </ItemGroup>
 </Project>

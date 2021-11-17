@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedLists", "LinkedLists\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedListsTest", "LinkedListsTest\LinkedListsTest.csproj", "{A8DB7E81-1CDC-418F-AFE5-F789FB594677}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayLists", "ArrayLists\ArrayLists.csproj", "{0C801969-622A-4344-B637-C14C4FFE72B2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedLists", "DoubleLinkedLists\DoubleLinkedLists.csproj", "{B1F0A564-29BA-4D53-85BF-7A1F26817967}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedListsTest", "DoubleLinkedListsTest\DoubleLinkedListsTest.csproj", "{A1C9BB96-7B5E-42F9-8664-DDFCC7EAA8A0}"
@@ -35,10 +33,6 @@ Global
 		{A8DB7E81-1CDC-418F-AFE5-F789FB594677}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8DB7E81-1CDC-418F-AFE5-F789FB594677}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8DB7E81-1CDC-418F-AFE5-F789FB594677}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0C801969-622A-4344-B637-C14C4FFE72B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0C801969-622A-4344-B637-C14C4FFE72B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0C801969-622A-4344-B637-C14C4FFE72B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0C801969-622A-4344-B637-C14C4FFE72B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B1F0A564-29BA-4D53-85BF-7A1F26817967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1F0A564-29BA-4D53-85BF-7A1F26817967}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F0A564-29BA-4D53-85BF-7A1F26817967}.Release|Any CPU.ActiveCfg = Release|Any CPU
