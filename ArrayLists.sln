@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedLists", "Double
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleLinkedListsTest", "DoubleLinkedListsTest\DoubleLinkedListsTest.csproj", "{A1C9BB96-7B5E-42F9-8664-DDFCC7EAA8A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayList", "ArrayList\ArrayList.csproj", "{90EEF8FE-93BD-431F-B45F-DA832885E093}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayLists", "ArrayLists\ArrayLists.csproj", "{E3C8F8AD-915E-4AF7-A8A0-19F9C0FB23B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{A1C9BB96-7B5E-42F9-8664-DDFCC7EAA8A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1C9BB96-7B5E-42F9-8664-DDFCC7EAA8A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1C9BB96-7B5E-42F9-8664-DDFCC7EAA8A0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90EEF8FE-93BD-431F-B45F-DA832885E093}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90EEF8FE-93BD-431F-B45F-DA832885E093}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90EEF8FE-93BD-431F-B45F-DA832885E093}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90EEF8FE-93BD-431F-B45F-DA832885E093}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C8F8AD-915E-4AF7-A8A0-19F9C0FB23B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C8F8AD-915E-4AF7-A8A0-19F9C0FB23B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C8F8AD-915E-4AF7-A8A0-19F9C0FB23B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C8F8AD-915E-4AF7-A8A0-19F9C0FB23B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

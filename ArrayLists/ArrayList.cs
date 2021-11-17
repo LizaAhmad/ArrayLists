@@ -84,7 +84,7 @@ namespace ArrayLists
 
 
         //удаление из конца одного элемента
-        public void DeleteFronEnd()
+        public void DeleteFromEnd()
         {
             if (Lenght > 0)
             {
@@ -458,3 +458,74 @@ namespace ArrayLists
 
             }
         }
+
+
+
+        public void WriteToConsole()
+        {
+            for (int i = 0; i < Lenght; i++)
+            {
+                Console.Write($"{_array[i]} ");
+            }
+            Console.WriteLine();
+        }
+
+
+        public bool IsArrayFull()
+        {
+            bool f = false;
+            if (Lenght == _array.Length)
+            {
+                f = true;
+            }
+            return f;
+        }
+
+
+        public override bool Equals(object obj)//метод сравнения для нашего класса
+        {
+            ArrayList arrayList = (ArrayList)obj;
+
+            if (Lenght != arrayList.Lenght)
+            {
+                return false;
+            }
+
+            for (int i = 0; i < Lenght; i++)
+            {
+                if (arrayList._array[i] != _array[i])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        public override string ToString()//метод вывода, чтобы видеть объекты
+        {
+            string s = "";
+            for (int i = 0; i < Lenght; i++)
+            {
+                s += $"{_array[i] } ";
+            }
+            return s;
+        }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void UpArraySize()
+        {
+            int[] tmpArray = new int[(int)(Lenght * 1.5)];
+            for (int i = 0; i < Lenght; i++)
+            {
+                tmpArray[i] = _array[i];
+            }
+            _array = tmpArray;
+        }
+
+    }
+}

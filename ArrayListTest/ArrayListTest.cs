@@ -14,7 +14,7 @@ namespace ArrayListTest
         {
             ArrayList actual = new ArrayList(array);
             ArrayList expected = new ArrayList(expectedArray);
-
+            
             actual.Add(value);
 
             Assert.AreEqual(expected, actual);
@@ -61,16 +61,16 @@ namespace ArrayListTest
         }
         #endregion
 
-        #region DeleteFronEndTest
+        #region DeleteFromEndTest
         [TestCase(new int[] { 1, 2, 3 }, new int[] { 1, 2 })]
         [TestCase(new int[] { }, new int[] { })]
         [TestCase(new int[] { 0, -1, -2 }, new int[] { 0, -1 })]
-        public void DeleteFronEndTest(int[] array, int[] expectedArray)
+        public void DeleteFromEndTest(int[] array, int[] expectedArray)
         {
             ArrayList actual = new ArrayList(array);
             ArrayList expected = new ArrayList(expectedArray);
 
-            actual.DeleteFronEnd();
+            actual.DeleteFromEnd();
 
             Assert.AreEqual(expected, actual);
         }
@@ -134,9 +134,9 @@ namespace ArrayListTest
         #endregion
 
 
+        #region DeleteNElememtsFronEndTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         [TestCase(5, new int[] { })]
         [TestCase(-5,  new int[] { })]
-        #region DeleteNElememtsFronEndTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         public void DeleteNElememtsFronEndTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException(int n, int[] array)
         {
             ArrayList actual = new ArrayList(array);
@@ -161,9 +161,9 @@ namespace ArrayListTest
         #endregion
 
 
+        #region DeleteNElememtsFronEndTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         [TestCase(5, new int[] { })]
         [TestCase(-5, new int[] { })]
-        #region DeleteNElememtsFronEndTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         public void DeleteNElememtsFronBeginingTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException(int n, int[] array)
         {
             ArrayList actual = new ArrayList(array);
@@ -188,9 +188,9 @@ namespace ArrayListTest
         #endregion
 
 
+        #region DeleteNElememtsByIndexTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         [TestCase(5, -1, new int[] { })]
         [TestCase(-5, 5, new int[] { })]
-        #region DeleteNElememtsByIndexTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException
         public void DeleteNElememtsByIndexTest_WhenNIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentException(int index, int n, int[] array)
         {
             ArrayList actual = new ArrayList(array);
@@ -198,9 +198,9 @@ namespace ArrayListTest
         }
         #endregion
 
+        #region DeleteNElememtsByIndexTest_WhenIndexIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentOutOfRangeException
         [TestCase(5, 0, new int[] { })]
         [TestCase(-5, 0, new int[] { })]
-        #region DeleteNElememtsByIndexTest_WhenIndexIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentOutOfRangeException
         public void DeleteNElememtsByIndexTest_WhenIndexIsBiggerThenLengthOrLessThenZero_ShouldThrowsArgumentOutOfRangeException(int index, int n, int[] array)
         {
             ArrayList actual = new ArrayList(array);

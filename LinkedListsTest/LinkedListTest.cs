@@ -90,7 +90,7 @@ namespace LinkedListsTest
 
         #endregion
 
-        #region
+        #region DeleteFromBeginingTest_WhenListEmpty_ShouldNullReferenceException
         [TestCase(new int[] { })]
         public void DeleteFromBeginingTest_WhenListEmpty_ShouldNullReferenceException(int[] array)
         {
@@ -98,7 +98,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.DeleteFromBegining());
         }
         #endregion
-
 
         #region DeleteByIndex
         [TestCase(0, new int[] { 1, 2, 3 }, new int[] { 2, 3 })]
@@ -134,7 +133,6 @@ namespace LinkedListsTest
         }
         #endregion
 
-
         #region DeleteNElememtsFronEndTest
         [TestCase(1, new int[] { 1, 2, 3 }, new int[] { 1, 2 })]
         [TestCase(5, new int[] { 1, 2, 3, 4, 5 }, new int[] { })]
@@ -169,8 +167,6 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-
         #region DeleteNElememtsFronBeginingTest
         [TestCase(1, new int[] { 1, 2, 3 }, new int[] { 2, 3 })]
         [TestCase(5, new int[] { 1, 2, 3, 4, 5 }, new int[] { })]
@@ -186,8 +182,7 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-        #region
+        #region DeleteNElememtsFronBeginingTest_WhenNBiggerThenLength_ShouldNullReferenceException
         [TestCase(1, new int[] { })]
         [TestCase(5, new int[] { 1, 2, 3 })]
         public void DeleteNElememtsFronBeginingTest_WhenNBiggerThenLength_ShouldNullReferenceException(int n, int[] array)
@@ -197,9 +192,7 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-
-        #region
+        # region DeleteNElememtsFronBeginingTest_WhenNLessThanZero_ShouldArgumentException
         [TestCase(-1, new int[] { 1, 2, 3 })]
         public void DeleteNElememtsFronBeginingTest_WhenNLessThanZero_ShouldArgumentException(int n, int[] array)
         {
@@ -207,8 +200,6 @@ namespace LinkedListsTest
             Assert.Throws<ArgumentException>(() => actual.DeleteNElememtsFronBegining(n));
         }
         #endregion
-
-
 
         #region DeleteNElememtsByIndexTest
         [TestCase(1, 2, new int[] { 1, 2, 3, 4, 5, 6 }, new int[] { 1, 4, 5, 6 })]
@@ -225,9 +216,7 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-
-        #region
+        #region DeleteNElememtsByIndexTest_WhenNAndIndexBiggerThanLength_ShouldNullReferenceException
         [TestCase(1, 1, new int[] { })]
         [TestCase(5, 1, new int[] { 1, 22, 33, 44 })]
         [TestCase(5, 1, new int[] { 2, 3, 4, 5, 6 })]
@@ -238,10 +227,8 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-
-        #region
-        [TestCase(-5, 1, new int[] { 1, 2, 3, 4, 5,  })]
+        #region DeleteNElememtsByIndexTest_WhenIndexLessThanZero_ShouldIndexOutOfRangeException
+        [TestCase(-5, 1, new int[] { 1, 2, 3, 4, 5  })]
         public void DeleteNElememtsByIndexTest_WhenIndexLessThanZero_ShouldIndexOutOfRangeException(int index, int n, int[] array)
         {
             LinkedList actual = new LinkedList(array);
@@ -249,9 +236,7 @@ namespace LinkedListsTest
         }
         #endregion
 
-
-
-        #region
+        #region DeleteNElememtsByIndexTest_WhenNLessThanZero_ShouldArgumentException
         [TestCase(5, -1, new int[] { 1, 2, 3, 4, 5,  })]
         public void DeleteNElememtsByIndexTest_WhenNLessThanZero_ShouldArgumentException(int index, int n, int[] array)
         {
@@ -272,7 +257,6 @@ namespace LinkedListsTest
             Assert.AreEqual(expectedLenght, lenght);
         }
         #endregion
-
 
         #region GetElementByIndexTest
         [TestCase(1, 1, new int[] { 0, 1, 2, 3 })]
@@ -298,7 +282,6 @@ namespace LinkedListsTest
             Assert.Throws<IndexOutOfRangeException>(() => actual.GetElementByIndex(index));
         }
         #endregion
-
 
         #region FirstIndexByValueTest
         [TestCase(0, 0, new int[] { 0, 0, 0 })]
@@ -326,8 +309,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.FirstIndexByValue(value));
         }
         #endregion
-
-
 
         #region ChangeValueByIndexTest
         [TestCase(1, 1, new int[] { 0, 0, 2, 3, 4, 5 }, new int[] { 0, 1, 2, 3, 4, 5 })]
@@ -367,7 +348,6 @@ namespace LinkedListsTest
         }
         #endregion
 
-
         #region GetReversTest_WhenListEmpty_ShouldNullReferenceException
         [TestCase(new int[] { })]
         public void GetReversTest_WhenListEmpty_ShouldNullReferenceException(int[] array)
@@ -376,7 +356,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.GetReverse());
         }
         #endregion
-
 
         #region GetMaxTest
         [TestCase(5, new int[] { 1, 2, 3, 4, 5 })]
@@ -394,7 +373,6 @@ namespace LinkedListsTest
         }
         #endregion
 
-
         #region GetMaxTest_WhenArrayListIsEmpty_ShouldThrowsNullReferenceException
         [TestCase(new int[] { })]
         public void GetMaxTest_WhenArrayListIsEmpty_ShouldThrowsNullReferenceException(int[] array)
@@ -403,7 +381,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.GetMax());
         }
         #endregion
-
 
         #region GetMinTest
         [TestCase(1, new int[] { 1, 2, 3, 4, 5 })]
@@ -422,8 +399,6 @@ namespace LinkedListsTest
 
         #endregion
 
-
-
         #region GetMinTest_WhenArrayListIsEmpty_ShouldThrowsNullReferenceException
         [TestCase(new int[] { })]
         public void GetMinTest_WhenArrayListIsEmpty_ShouldThrowsNullReferenceException(int[] array)
@@ -432,8 +407,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.GetMin());
         }
         #endregion
-
-
 
         #region GetIndexOfMaxElementTest
         [TestCase(4, new int[] { 1, 2, 3, 4, 5 })]
@@ -460,8 +433,6 @@ namespace LinkedListsTest
             Assert.Throws<NullReferenceException>(() => actual.GetIndexOfMaxElement());
         }
         #endregion
-
-
 
         #region GetIndexOfMinElementTest
         [TestCase(0, new int[] { 1, 2, 3, 4, 5 })]
@@ -490,10 +461,108 @@ namespace LinkedListsTest
         #endregion
 
         //сортировка по возрастанию
+        #region GetSortAscendingTest
+        [TestCase(new int[] { }, new int[] { 4, 3, 6, 8, 1, 4, 6 }, new int[] { 1, 3, 4, 4, 6, 6, 8 })]
+        [TestCase(new int[] { }, new int[] { 0, 0, 0, 0 }, new int[] { 0, 0, 0, 0 })]
+        [TestCase(new int[] { }, new int[] { -4, -3, -6, -8, -1, -4, -6 }, new int[] { -8, -6, -6, -4, -4, -3, -1 })]
+        [TestCase(new int[] { }, new int[] { }, new int[] { })]
+        public void GetSortAscendingTest(int[] empty, int[] array, int[] expectedArray)
+        {
+            LinkedList actual = new LinkedList(array);
+            LinkedList expected = new LinkedList(expectedArray);
+
+            actual.GetSortAscending(empty);
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        #endregion
 
         //сортировка по убыванию
 
+        #region DeleteAllElementsAndGetCountTest
+        [TestCase(0, 7, new int[] { 0, 1, 0, 2, 0, 3, 0, 4, 0, 5, 0, 6, 0 }, new int[] { 1, 2, 3, 4, 5, 6 })]//собака сутулая
+        [TestCase(-5, 3, new int[] { -5, 1, 2, -5, 3, 4, -5, 6 }, new int[] { 1, 2, 3, 4, 6 })]             //это тоже
+        [TestCase(3, 0, new int[] { }, new int[] { })]
+        [TestCase(3, 0, new int[] { 1, 2, 4, 5 }, new int[] { 1, 2, 4, 5 })]
+        public void DeleteAllElementsAndGetCountTest(int value, int countExpected, int[] array, int[] arrayExpected)
+        {
+            LinkedList action = new LinkedList(array);
+            LinkedList expected = new LinkedList(arrayExpected);
+            int count;
 
+            count = action.DeleteAllElementsAndGetCount(value);
+            action.DeleteAllElementsAndGetCount(value);
+
+            Assert.AreEqual(count, countExpected);
+            Assert.AreEqual(expected, action);
+        }
+        #endregion
+
+        #region AddArrayListInTheEndTest
+        [TestCase(new int[] { 1, 2, 3 }, new int[] { 4, 5, 6 }, new int[] { 1, 2, 3, 4, 5, 6 })]
+        [TestCase(new int[] { }, new int[] { 4, 5, 6 }, new int[] { 4, 5, 6 })]
+        [TestCase(new int[] { 1, 2, 3, 1, 2, 3, 4, 5, 6 }, new int[] { 4, 5, 6 }, new int[] { 1, 2, 3, 1, 2, 3, 4, 5, 6, 4, 5, 6 })]
+        public void AddArrayListInTheEndTest(int[] array, int[] array1, int[] expectedArray)
+        {
+            LinkedList action = new LinkedList(array);
+            LinkedList expected = new LinkedList(expectedArray);
+
+            action.AddArrayListInTheEnd(array1);
+
+            Assert.AreEqual(expected, action);
+        }
+        #endregion
+
+        #region AddArrayListInTheBeginingTest
+        [TestCase(new int[] { 4, 5, 6 }, new int[] { 1, 2, 3 }, new int[] { 1, 2, 3, 4, 5, 6 })]
+        [TestCase(new int[] { }, new int[] { 4, 5, 6 }, new int[] { 4, 5, 6 })]
+        [TestCase(new int[] { 4, 5, 6 }, new int[] { 1, 2, 3, 1, 2, 3, 4, 5, 6 }, new int[] { 1, 2, 3, 1, 2, 3, 4, 5, 6, 4, 5, 6 })]
+        public void AddArrayListInTheBeginingTest(int[] array, int[] array1, int[] expectedArray)
+        {
+            LinkedList action = new LinkedList(array);
+            LinkedList expected = new LinkedList(expectedArray);
+
+            action.AddArrayListInTheBegining(array1);
+
+            Assert.AreEqual(expected, action);
+        }
+
+        #endregion
+
+        #region AddArrayListByIndexTest
+        [TestCase(2, new int[] { 4, 5, 6 }, new int[] { 1, 2, 3 }, new int[] { 4, 5, 1, 2, 3, 6 })]
+        [TestCase(0, new int[] { }, new int[] { 4, 5, 6 }, new int[] { 4, 5, 6 })]
+        [TestCase(3, new int[] { 4, 5, 6 }, new int[] { 1, 2, 3, 1, 2, 3, 4, 5, 6 }, new int[] { 4, 5, 6, 1, 2, 3, 1, 2, 3, 4, 5, 6 })]
+        public void AddArrayListByIndexTest(int index, int[] array, int[] array1, int[] expectedArray)
+        {
+            LinkedList action = new LinkedList(array);
+            LinkedList expected = new LinkedList(expectedArray);
+
+            action.AddArrayListByIndex(array1, index);
+
+            Assert.AreEqual(expected, action);
+        }
+
+        #endregion
+
+        #region AddArrayListByIndexTest_WhenIndexLessThanZero_ShouldThrowsArgumentException
+        [TestCase(-1, new int[] { 1, 2, 3 })]
+        public void AddArrayListByIndexTest_WhenIndexLessThanZero_ShouldThrowsIndexOutOfRangeException(int index, int[] array)
+        {
+            LinkedList actual = new LinkedList(array);
+            Assert.Throws<IndexOutOfRangeException>(() => actual.AddArrayListByIndex(array, index));
+        }
+        #endregion
+
+        #region AddArrayListByIndexTest_WhenIndexBiggerThanLenght_ShouldThrowsNullReferenceException
+        [TestCase(5, new int[] { 1, 2, 3 })]
+        public void AddArrayListByIndexTest_WhenIndexBiggerThanLenght_ShouldThrowsNullReferenceException(int index, int[] array)
+        {
+            LinkedList actual = new LinkedList(array);
+            Assert.Throws<NullReferenceException>(() => actual.AddArrayListByIndex(array, index));
+        }
+        #endregion
 
     }
 }

@@ -9,6 +9,7 @@ namespace LinkedLists
     {
         private Node _root;
 
+        //3 конструктора(пустой, на основе одного элемента, на основе массива )
 
         public LinkedList()
         {
@@ -480,28 +481,92 @@ namespace LinkedLists
         }
 
         //сортировка по возрастанию
-        public void GetSortAscending()
+        public void GetSortAscending(int[] list)
         {
+            if(GetLength() > 0)
+            {
+                LinkedList linkedList = new LinkedList(list);
+                for(int i = 0; i < GetLength(); i++)
+                {
+                    linkedList.AddByIndex(GetMin(),GetIndexOfMinElement());
+                    DeleteByIndex(GetIndexOfMinElement());
 
+                }
+            }
         }
 
             //сортировка по убыванию
 
 
             //удаление по значению первого(?вернуть индекс)
-            public int DeleteFirstElementAndGetIndex(int value)
+        public int DeleteFirstElementAndGetIndex(int value)
         {
             int index = FirstIndexByValue(value);
             DeleteByIndex(index);
             return index;
         }
         //удаление по значению всех(?вернуть кол-во)
-        //3 конструктора(пустой, на основе одного элемента, на основе массива )
+        public int DeleteAllElementsAndGetCount(int value)
+        {
+            Node tmp = _root;
+            int count = 0;
+            for (int i = 0; i < GetLength(); i++)
+            {
+                if(_root.Value == value)
+                {
+                    DeleteByIndex(i);
+                    count++;
+                }
+                _root = _root.Next;
+            }
+            return count;
+        }
         //добавление списка(вашего самодельного) в конец
+        public void AddArrayListInTheEnd(int[] array)
+        {
+            LinkedList linkedList = new LinkedList(array);
+            Node tmp = linkedList._root;
+            for(int i = 0; i < linkedList.GetLength(); i++)
+            {
+                Add(tmp.Value);
+                tmp = tmp.Next;
+            }
+        }
+
         //добавление списка в начало
+        public void AddArrayListInTheBegining(int[] array)
+        {
+            LinkedList linkedList = new LinkedList(array);
+            Node tmp = linkedList._root;
+
+            for (int i = 0; i < linkedList.GetLength(); i++)
+            {
+                AddByIndex(tmp.Value, i);
+                tmp = tmp.Next;
+            }
+        }
         //добавление списка по индексу
+        public void AddArrayListByIndex(int[] array, int index)
+        {
 
-        
+            if (index < 0)
+            {
+                throw new IndexOutOfRangeException();
+            }
+            if (index > GetLength())
+            {
+                throw new NullReferenceException();
+            }
+             LinkedList linkedList = new LinkedList(array);
+            Node tmp = linkedList._root;
+
+            for (int i = 0; i < linkedList.GetLength(); i++)
+            {
+                AddByIndex(tmp.Value, index);
+                tmp = tmp.Next;
+                index++;
+            }
+        }
 
 
 
@@ -517,9 +582,7 @@ namespace LinkedLists
 
 
 
-
-
-        public void RemoveByIndex(int index)
+public void RemoveByIndex(int index)
         {
             Node tmp = _root;
 
